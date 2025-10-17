@@ -58,25 +58,25 @@ namespace KolmVormid
             // tableLayoutPanel1
             // 
             _tableLayoutPanel1.ColumnCount = 2;
-            _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
             _tableLayoutPanel1.Controls.Add(_pictureBox1, 0, 0);
             _tableLayoutPanel1.Controls.Add(_flowLayoutPanel1, 1, 1);
             _tableLayoutPanel1.Controls.Add(_flowLayoutPanel2, 0, 1);
-            _tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            _tableLayoutPanel1.Dock = DockStyle.Fill;
             _tableLayoutPanel1.Location = new Point(0, 0);
             _tableLayoutPanel1.Name = "tableLayoutPanel1";
             _tableLayoutPanel1.RowCount = 2;
-            _tableLayoutPanel1.RowStyles.Add(new RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            _tableLayoutPanel1.RowStyles.Add(new RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            _tableLayoutPanel1.RowStyles.Add(new RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            _tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+            _tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            _tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             _tableLayoutPanel1.Size = new Size(784, 561);
             _tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             _tableLayoutPanel1.SetColumnSpan(_pictureBox1, 2);
-            _pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            _pictureBox1.Dock = DockStyle.Fill;
             _pictureBox1.Location = new Point(3, 3);
             _pictureBox1.Name = "pictureBox1";
             _pictureBox1.Size = new Size(778, 442);
@@ -93,8 +93,8 @@ namespace KolmVormid
             _flowLayoutPanel1.Controls.Add(_backgroundButton);
             _flowLayoutPanel1.Controls.Add(_closeButton);
             _flowLayoutPanel1.Controls.Add(_drawButton);
-            _flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            _flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            _flowLayoutPanel1.Dock = DockStyle.Fill;
+            _flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
             _flowLayoutPanel1.Location = new Point(120, 451);
             _flowLayoutPanel1.Name = "flowLayoutPanel1";
             _flowLayoutPanel1.Size = new Size(661, 107);
@@ -149,8 +149,8 @@ namespace KolmVormid
             _flowLayoutPanel2.Controls.Add(_stretchCheckbox);
             _flowLayoutPanel2.Controls.Add(_monochromeCheckbox);
             _flowLayoutPanel2.Controls.Add(_spiralCheckbox);
-            _flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            _flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            _flowLayoutPanel2.Dock = DockStyle.Fill;
+            _flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             _flowLayoutPanel2.Location = new Point(3, 451);
             _flowLayoutPanel2.Name = "flowLayoutPanel2";
             _flowLayoutPanel2.Size = new Size(111, 107);
