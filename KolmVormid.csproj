@@ -46,13 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MathQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MathProblem.cs" />
+    <Compile Include="PictureViewer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MathQuiz.resx">
+      <DependentUpon>MathQuiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureViewer.resx">
+      <DependentUpon>PictureViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

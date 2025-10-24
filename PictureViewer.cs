@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace KolmVormid
 {
-    public partial class MainForm : Form
+    public partial class PictureViewer : Form
     {
         private PictureBox _pictureBox1;
         private FlowLayoutPanel _flowLayoutPanel1;
@@ -29,7 +29,7 @@ namespace KolmVormid
         private bool _imageConverted = false;
         private Color _drawColor = Color.White;
 
-        public MainForm()
+        public PictureViewer()
         {
             InitializeComponent();
             Text = "MainForm";
