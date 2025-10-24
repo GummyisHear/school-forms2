@@ -22,6 +22,8 @@ namespace KolmVormid
         private CheckBox _spiralCheckbox;
         private Image _originalImage;
         private Button _drawButton;
+        private Button _saveButton;
+        private SaveFileDialog _saveFileDialog;
 
         private bool _isDrawing = false;
         private bool _imageConverted = false;
@@ -49,14 +51,15 @@ namespace KolmVormid
             _openFileDialog1 = new OpenFileDialog();
             _colorDialog1 = new ColorDialog();
             _drawButton = new Button();
+            _saveButton = new Button();
+            _saveFileDialog = new SaveFileDialog();
             _tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(_pictureBox1)).BeginInit();
             _flowLayoutPanel1.SuspendLayout();
             _flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
-            // 
+
             // tableLayoutPanel1
-            // 
             _tableLayoutPanel1.ColumnCount = 2;
             _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             _tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
@@ -71,143 +74,90 @@ namespace KolmVormid
             _tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             _tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             _tableLayoutPanel1.Size = new Size(784, 561);
-            _tableLayoutPanel1.TabIndex = 0;
-            // 
+
             // pictureBox1
-            // 
             _tableLayoutPanel1.SetColumnSpan(_pictureBox1, 2);
             _pictureBox1.Dock = DockStyle.Fill;
-            _pictureBox1.Location = new Point(3, 3);
             _pictureBox1.Name = "pictureBox1";
-            _pictureBox1.Size = new Size(778, 442);
-            _pictureBox1.TabIndex = 0;
             _pictureBox1.TabStop = false;
             _pictureBox1.MouseDown += new MouseEventHandler(pictureBox1_MouseDown);
             _pictureBox1.MouseMove += new MouseEventHandler(pictureBox1_MouseMove);
             _pictureBox1.MouseUp += new MouseEventHandler(pictureBox1_MouseUp);
-            // 
+
             // flowLayoutPanel1
-            // 
             _flowLayoutPanel1.Controls.Add(_showButton);
             _flowLayoutPanel1.Controls.Add(_clearButton);
             _flowLayoutPanel1.Controls.Add(_backgroundButton);
             _flowLayoutPanel1.Controls.Add(_closeButton);
             _flowLayoutPanel1.Controls.Add(_drawButton);
+            _flowLayoutPanel1.Controls.Add(_saveButton);
             _flowLayoutPanel1.Dock = DockStyle.Fill;
             _flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
-            _flowLayoutPanel1.Location = new Point(120, 451);
-            _flowLayoutPanel1.Name = "flowLayoutPanel1";
-            _flowLayoutPanel1.Size = new Size(661, 107);
-            _flowLayoutPanel1.TabIndex = 2;
-            // 
+
             // showButton
-            // 
             _showButton.AutoSize = true;
-            _showButton.Location = new Point(570, 3);
-            _showButton.Name = "showButton";
-            _showButton.Size = new Size(88, 23);
-            _showButton.TabIndex = 0;
             _showButton.Text = "Show a picture";
-            _showButton.UseVisualStyleBackColor = true;
             _showButton.Click += new EventHandler(showButton_Click);
-            // 
+
             // clearButton
-            // 
             _clearButton.AutoSize = true;
-            _clearButton.Location = new Point(470, 3);
-            _clearButton.Name = "clearButton";
-            _clearButton.Size = new Size(94, 23);
-            _clearButton.TabIndex = 1;
             _clearButton.Text = "Clear the picture";
-            _clearButton.UseVisualStyleBackColor = true;
             _clearButton.Click += new EventHandler(clearButton_Click);
-            // 
+
             // backgroundButton
-            // 
             _backgroundButton.AutoSize = true;
-            _backgroundButton.Location = new Point(327, 3);
-            _backgroundButton.Name = "backgroundButton";
-            _backgroundButton.Size = new Size(137, 23);
-            _backgroundButton.TabIndex = 2;
             _backgroundButton.Text = "Set the background color";
-            _backgroundButton.UseVisualStyleBackColor = true;
             _backgroundButton.Click += new EventHandler(backgroundButton_Click);
-            // 
+
             // closeButton
-            // 
             _closeButton.AutoSize = true;
-            _closeButton.Location = new Point(246, 3);
-            _closeButton.Name = "closeButton";
-            _closeButton.Size = new Size(75, 23);
-            _closeButton.TabIndex = 3;
             _closeButton.Text = "Close";
-            _closeButton.UseVisualStyleBackColor = true;
             _closeButton.Click += new EventHandler(closeButton_Click);
-            // 
+
             // flowLayoutPanel2
-            // 
             _flowLayoutPanel2.Controls.Add(_stretchCheckbox);
             _flowLayoutPanel2.Controls.Add(_monochromeCheckbox);
             _flowLayoutPanel2.Controls.Add(_spiralCheckbox);
             _flowLayoutPanel2.Dock = DockStyle.Fill;
             _flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            _flowLayoutPanel2.Location = new Point(3, 451);
-            _flowLayoutPanel2.Name = "flowLayoutPanel2";
-            _flowLayoutPanel2.Size = new Size(111, 107);
-            _flowLayoutPanel2.TabIndex = 3;
-            // 
+
             // stretchCheckbox
-            // 
             _stretchCheckbox.AutoSize = true;
-            _stretchCheckbox.Location = new Point(3, 3);
             _stretchCheckbox.Name = "stretchCheckbox";
-            _stretchCheckbox.Size = new Size(60, 17);
-            _stretchCheckbox.TabIndex = 2;
             _stretchCheckbox.Text = "Stretch";
-            _stretchCheckbox.UseVisualStyleBackColor = true;
             _stretchCheckbox.CheckedChanged += new EventHandler(stretchCheckbox_CheckedChanged_1);
-            // 
+            
             // monochromeCheckbox
-            // 
             _monochromeCheckbox.AutoSize = true;
-            _monochromeCheckbox.Location = new Point(3, 26);
-            _monochromeCheckbox.Name = "monochromeCheckbox";
-            _monochromeCheckbox.Size = new Size(88, 17);
-            _monochromeCheckbox.TabIndex = 3;
             _monochromeCheckbox.Text = "Monochrome";
-            _monochromeCheckbox.UseVisualStyleBackColor = true;
             _monochromeCheckbox.CheckedChanged += new EventHandler(monochromeCheckbox_CheckedChanged);
-            // 
+
             // spiralCheckbox
-            // 
             _spiralCheckbox.AutoSize = true;
-            _spiralCheckbox.Location = new Point(3, 49);
-            _spiralCheckbox.Name = "spiralCheckbox";
-            _spiralCheckbox.Size = new Size(52, 17);
-            _spiralCheckbox.TabIndex = 4;
             _spiralCheckbox.Text = "Spiral";
-            _spiralCheckbox.UseVisualStyleBackColor = true;
             _spiralCheckbox.CheckedChanged += new EventHandler(spiralCheckbox_CheckedChanged);
-            // 
+
             // openFileDialog1
-            // 
             _openFileDialog1.FileName = "openFileDialog1";
             _openFileDialog1.Filter = "All files (*.*)|*.*|JPEG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|PNG Files (*" +
     ".png)|*.png|BMP Files (*.bmp)|*.bmp";
             _openFileDialog1.Title = "Select a picture file";
-            // 
+
             // drawButton
-            // 
-            _drawButton.Location = new Point(165, 3);
-            _drawButton.Name = "drawButton";
-            _drawButton.Size = new Size(75, 23);
-            _drawButton.TabIndex = 4;
+            _drawButton.AutoSize = true;
             _drawButton.Text = "Draw!";
-            _drawButton.UseVisualStyleBackColor = true;
             _drawButton.Click += new EventHandler(drawButton_Click);
-            // 
+
+            // save button
+            _saveButton.AutoSize = true;
+            _saveButton.Text = "Save picture";
+            _saveButton.Click += new EventHandler(saveButton_Click);
+
+            //save file dialog
+            _saveFileDialog.Filter = "PNG Image|*.png|JPEG Image|*.jpg";
+            _saveFileDialog.Title = "Salvesta pilt";
+
             // MainForm
-            // 
             ClientSize = new Size(784, 561);
             Controls.Add(_tableLayoutPanel1);
             Name = "MainForm";
@@ -218,7 +168,6 @@ namespace KolmVormid
             _flowLayoutPanel2.ResumeLayout(false);
             _flowLayoutPanel2.PerformLayout();
             ResumeLayout(false);
-
         }
 
         private Image ApplyMonochromeFilter(Image image)
@@ -398,6 +347,24 @@ namespace KolmVormid
             {
                 _pictureBox1.Image = ConvertToNonIndexed(_pictureBox1.Image);
                 _imageConverted = true;
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (_pictureBox1.Image == null)
+                return;
+
+            if (_saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = _saveFileDialog.FileName;
+                var format = ImageFormat.Png;
+
+                if (filePath.EndsWith(".jpg"))
+                    format = ImageFormat.Jpeg;
+
+                _pictureBox1.Image.Save(filePath, format);
+                MessageBox.Show("Pilt salvestatud!", "Valmis", MessageBoxButtons.OK);
             }
         }
 
