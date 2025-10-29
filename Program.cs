@@ -16,7 +16,7 @@ namespace KolmVormid
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MathQuiz());
+            Application.Run(new MatchGame());
         }
     }
 }
